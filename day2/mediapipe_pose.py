@@ -5,9 +5,6 @@ mp_pose = mp.solutions.pose
 
 mp_draw = mp.solutions.drawing_utils
 
-def landmarks_to_keypoints(results):
-
-    return
 
 def detection_context(dev_id=0):
 
