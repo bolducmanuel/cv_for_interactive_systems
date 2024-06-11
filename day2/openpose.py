@@ -9,9 +9,9 @@ parser = argparse.ArgumentParser(
                     'from https://github.com/CMU-Perceptual-Computing-Lab/openpose project using OpenCV. '
                     'The sample and model are simplified and could be used for a single person on the frame.')
 parser.add_argument('--input', help='Path to image or video. Skip to capture frames from camera')
-parser.add_argument('--proto', help='Path to .prototxt')
-parser.add_argument('--model', help='Path to .caffemodel')
-parser.add_argument('--dataset', help='Specify what kind of model was trained. '
+parser.add_argument('--proto', default="pose_deploy_linevec.prototxt", help='Path to .prototxt')
+parser.add_argument('--model', default = "pose_iter_440000.caffemodel", help='Path to .caffemodel')
+parser.add_argument('--dataset', default = "COCO", help='Specify what kind of model was trained. '
                                       'It could be (COCO, MPI, HAND) depends on dataset.')
 parser.add_argument('--thr', default=0.1, type=float, help='Threshold value for pose parts heat map')
 parser.add_argument('--width', default=368, type=int, help='Resize input to specific width.')
