@@ -6,7 +6,7 @@ mp_pose = mp.solutions.pose
 mp_draw = mp.solutions.drawing_utils
 
 
-def detection_context(dev_id=0):
+def detection_context(dev_id=2):
 
     #load json parameters for detection
     #self.json_load(config)
