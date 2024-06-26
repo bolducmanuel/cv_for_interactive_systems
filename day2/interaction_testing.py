@@ -3,8 +3,15 @@ import cv2
 
 mp_pose = mp.solutions.pose
 
-mp_draw = mp.solutions.drawing_utils
+def hand_height(data, image):
 
+    first_hand = data[15]
+    #second_hand = data[32:34]
+
+    image = cv2.putText(image, 'hand height:' +  str(round(first_hand.y,2)), org = (50,125), fontFace = cv2.FONT_HERSHEY_SIMPLEX, 
+        fontScale = 1, color = (255,255,255) , thickness = 2, lineType= cv2.LINE_AA)
+ 
+    return image
 
 def detection_context(dev_id=0):
 
@@ -22,21 +29,24 @@ def detection_context(dev_id=0):
             # pass by reference.
             image.flags.writeable = False
             image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
-
+            
             results = pose.process(image)
-
+            image = cv2.flip(image, 1)
+            
             if results.pose_landmarks:
 
-                mp_draw.draw_landmarks(image, results.pose_landmarks, mp_pose.POSE_CONNECTIONS)
+                image = hand_height(results.pose_landmarks.landmark, image) ##this is for the hand_height function
+
 
             image = cv2.cvtColor(image, cv2.COLOR_RGB2BGR)
-            image = cv2.flip(image, 1)
+            
             cv2.imshow('frame', image)
             if cv2.waitKey(1) == ord('q'):
                 break
 
         cap.release()
         cv2.destroyAllWindows()
+        osc_terminate()
 
 if __name__ == '__main__':
 
