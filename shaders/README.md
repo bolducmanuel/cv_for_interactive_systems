@@ -22,6 +22,8 @@ This directory contains information to introduce what are shaders, and how we ca
 
 1. [The Book of shaders](https://thebookofshaders.com/)
 
+    * The [glossary](https://thebookofshaders.com/glossary/) is a useful place to look at for understanding various functions implemented in the GLSL language.
+
 2. [Everything by Inigo Quilez](https://iquilezles.org/)
 
     * I highly recommend his [Youtube videos](https://iquilezles.org/live/)! 
