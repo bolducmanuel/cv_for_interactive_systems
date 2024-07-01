@@ -8,7 +8,11 @@ This directory contains information to introduce what are shaders, and how we ca
 
 2. [Basic math functions in shaders](https://www.shadertoy.com/view/M3tSDf)
 
-3. [Let's create a color slider](https://www.shadertoy.com/view/X3cXR8) 
+    * This is the one that was coded live today [math functions in shaders](https://www.shadertoy.com/view/X3dXDs)
+
+3. [Let's create a color slider](https://www.shadertoy.com/view/X3cXR8)
+
+    * This is the one that was coded live today (video coming soon!) [color slider no. 2](https://www.shadertoy.com/view/XXySRz)
 
 4. Looking at shaders on the ISF website and their functionalities.
 
@@ -26,7 +30,7 @@ This directory contains information to introduce what are shaders, and how we ca
 
 3. [GLSL 2D Tutorials](https://www.shadertoy.com/view/Md23DV)
 
-4. [ISF shaders](https://iquilezles.org/live/)
+4. [ISF shaders](https://editor.isf.video/)
 
     * [ISF documentation](https://docs.isf.video/quickstart.html)
     
